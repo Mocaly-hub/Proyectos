@@ -1,0 +1,11 @@
+﻿Recurso,Tamaño píxeles,Múltiplos 16px,Notas
+Pino grande 1,80x112,5x7,estático
+Pino grande 2,80x112,5x7,estático
+Pino grande 3,80x112,5x7,estático
+Pino grande 4,80x112,5x7,estático
+Pino mediano 1,64x96,4x6,estático
+Pino mediano 2,64x96,4x6,estático
+Pino mediano 3,64x96,4x6,estático
+Pino viento sutil,80x112,5x7,4 frames / 3 FPS / loop
+Muro pinos horizontal,256x144,16x9,4 piezas de 64x144
+Muro pinos vertical,80x288,5x18,4 pinos escalonados

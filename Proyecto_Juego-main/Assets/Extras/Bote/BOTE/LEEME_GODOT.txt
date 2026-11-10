@@ -1,0 +1,19 @@
+ATLANTISIS ADVENTURE — BOTE FLOTANDO (TOP-DOWN)
+
+Diseñado para la orilla y el agua mostradas en tu captura.
+Cuadrícula del mapa: 16x16 píxeles.
+Sprites: 64x80 píxeles cada fotograma (4x5 tiles).
+Spritesheets: 256x80 píxeles, 4 columnas x 1 fila.
+Bote_4frames_64x80.png: solo bote, sin fondo ni agua.
+Estela_4frames_64x80.png: agua/rizos y sombra separados para superponer.
+Bote_Con_Estela_4frames_64x80.png: bote y estela juntos, fácil de importar.
+Bote_Estatico_64x80.png: bote estacionado.
+
+Para Godot AnimatedSprite2D:
+Hframes=4, Vframes=1, FPS=3 a 4, Loop=On.
+Texture filter: Nearest. Escala: 1.0 (puedes ajustarla).
+La proa apunta hacia arriba (hacia la playa).
+Coloca la base del sprite en el agua, frente a la arena, sin cubrir el borde.
+La animación simula un balanceo discreto; no es para desplazamiento del bote.
+Los píxeles del agua de la escena siguen visibles debajo, gracias a la transparencia.
+NOTA: Sprite derivado de una ilustración generativa; se han extraído y alineado cuatro poses en una cuadrícula exacta, pero conviene comprobar visualmente el resultado en tu proyecto.

@@ -1,0 +1,25 @@
+TLANTISIS ADVENTURE | PINOS Y MUROS - Godot 4
+====================================================
+Referencia visual: pinos del bosque al atardecer del menú principal.
+El dibujo se adaptó de un catálogo de sprites generado; las imágenes finales están recortadas, alineadas y con canal alfa real.
+
+RECURSOS:
+- Pinos grandes: 80 x 112 px por sprite (5 x 7 celdas de 16px).
+- Pinos medianos: 64 x 96 px por sprite (4 x 6 celdas).
+- Muro horizontal completo: 256 x 144 px; 4 módulos de 64 x 144 px.
+- Muro vertical: 80 x 288 px.
+- Animación suave: 4 frames de 80 x 112 px, 3 FPS, bucle. El tronco no cambia de posición.
+
+CAPAS Y COLISIONES:
+1) Suelo (TileMapLayer).
+2) Troncos y sombras (TileMapLayer o Sprite2D) con colisión SOLO en las raíces; evita colisionar con toda la sombra.
+3) Copas por encima, SIN colisión. Activa Y-sort en el padre si el personaje debe verse delante o detrás.
+Importante: las hojas y troncos de un mismo árbol tienen imágenes CON EXACTAMENTE LAS MISMAS MEDIDAS y deben colocarse en el mismo origen.
+
+IMPORTACIÓN GODOT:
+- Filter: Nearest.
+- Usa atlas de 80x112 en la hoja de grandes; atlas de 64x96 en la de medianos.
+- Para un TileSet de base 16x16, configura el tamaño de cada tile de atlas a 5x7 o 4x6 respectivamente; cada sprite visual ocupa varios cuadros.
+- Si Godot no permite colocar fácilmente piezas grandes en el TileMap, instancia Sprite2D con la misma cuadrícula de 16x16 como guía, y CollisionShape2D en su base.
+- Los 4 módulos horizontales se colocan uno al lado del otro de izquierda a derecha, sin separación.
+- No se ha probado dentro de la APK; revisa pivotes/centros de los nodos de tu proyecto.

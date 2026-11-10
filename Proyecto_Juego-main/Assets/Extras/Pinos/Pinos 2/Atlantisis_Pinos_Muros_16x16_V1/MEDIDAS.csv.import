@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cg6avi52n8g1r"
+
+[deps]
+
+files=["res://Assets/Extras/Pinos/Pinos 2/Atlantisis_Pinos_Muros_16x16_V1/MEDIDAS.Tamaño píxeles.translation", "res://Assets/Extras/Pinos/Pinos 2/Atlantisis_Pinos_Muros_16x16_V1/MEDIDAS.Múltiplos 16px.translation", "res://Assets/Extras/Pinos/Pinos 2/Atlantisis_Pinos_Muros_16x16_V1/MEDIDAS.Notas.translation"]
+
+source_file="res://Assets/Extras/Pinos/Pinos 2/Atlantisis_Pinos_Muros_16x16_V1/MEDIDAS.csv"
+dest_files=["res://Assets/Extras/Pinos/Pinos 2/Atlantisis_Pinos_Muros_16x16_V1/MEDIDAS.Tamaño píxeles.translation", "res://Assets/Extras/Pinos/Pinos 2/Atlantisis_Pinos_Muros_16x16_V1/MEDIDAS.Múltiplos 16px.translation", "res://Assets/Extras/Pinos/Pinos 2/Atlantisis_Pinos_Muros_16x16_V1/MEDIDAS.Notas.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
