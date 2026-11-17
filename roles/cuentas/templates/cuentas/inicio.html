@@ -1,0 +1,15 @@
+{% extends 'cuentas/base.html' %}
+{% block contenido %}
+<h1>Hola, {{ user.username }}</h1>
+<p>Tu rol es: <strong>{{ rol }}</strong></p>
+
+{% if rol == 'Administrador' %}
+    <p>Puedes crear, ver, editar y eliminar registros.</p>
+    <a href="{% url 'lista' %}">Ir a los registros</a>
+{% elif rol == 'Usuario' %}
+    <p>Puedes ver los registros y editar solo los tuyos.</p>
+    <a href="{% url 'lista' %}">Ir a los registros</a>
+{% else %}
+    <p>Tu cuenta no tiene un grupo. Solicita al administrador que te asigne uno.</p>
+{% endif %}
+{% endblock %}

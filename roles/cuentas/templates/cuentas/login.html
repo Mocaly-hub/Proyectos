@@ -1,0 +1,19 @@
+{% extends 'cuentas/base.html' %}
+{% block contenido %}
+<section>
+    <h1>Iniciar sesion</h1>
+    <p>Ingresa a tu cuenta para continuar.</p>
+    {% if form.errors %}
+        <p class="aviso">Revisa tu usuario y contrasena.</p>
+    {% endif %}
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        <label for="usuario">Usuario</label>
+        <input id="usuario" name="username" required>
+        <label for="clave">Contrasena</label>
+        <input type="password" id="clave" name="password" required>
+        <button type="submit">Iniciar sesion</button>
+    </form>
+</section>
+{% endblock %}

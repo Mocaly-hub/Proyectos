@@ -1,0 +1,6 @@
+{% extends 'cuentas/base.html' %}
+{% block contenido %}
+<h1>Acceso denegado - 403</h1>
+<p>Tu rol no permite realizar esta accion.</p>
+<a href="{% url 'inicio' %}">Volver al inicio</a>
+{% endblock %}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preprueba Django - Roles y CRUD</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 850px; margin: 35px auto; padding: 0 16px; }
+        nav { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 25px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+        th, td { border: 1px solid #ccc; padding: 9px; text-align: left; }
+        input, textarea, select { display: block; margin: 6px 0 16px; padding: 7px; max-width: 100%; }
+        .boton { display: inline-block; padding: 8px 12px; margin: 8px 0; }
+        .aviso { color: #b00020; }
+    </style>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <header>
+        <nav aria-label="Menu principal">
+            <a href="{% url 'inicio' %}">Inicio</a>
+            {% if rol == 'Administrador' or rol == 'Usuario' %}
+                <a href="{% url 'lista' %}">Ver registros</a>
+            {% endif %}
+            {% if rol == 'Administrador' %}
+                <a href="{% url 'crear' %}">Crear registro</a>
+            {% endif %}
+            {% if user.is_superuser %}
+                <a href="{% url 'admin:index' %}">Administrar usuarios</a>
+            {% endif %}
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Cerrar sesion</button>
+            </form>
+        </nav>
+    </header>
+    {% endif %}
+
+    <main>
+        {% block contenido %}{% endblock %}
+    </main>
+</body>
+</html>

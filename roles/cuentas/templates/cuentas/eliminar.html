@@ -1,0 +1,10 @@
+{% extends 'cuentas/base.html' %}
+{% block contenido %}
+<h1>Eliminar registro</h1>
+<p>Quieres eliminar "{{ registro.titulo }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Si, eliminar</button>
+</form>
+<a href="{% url 'lista' %}">Cancelar</a>
+{% endblock %}
